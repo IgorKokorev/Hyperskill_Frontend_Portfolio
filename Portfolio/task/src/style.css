@@ -1,0 +1,236 @@
+.montserrat-norm {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    width: 80%;
+    height: 4rem;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    background: lightgray;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0.5rem;
+    justify-content: flex-end;
+    font-size: large;
+    visibility: visible;
+}
+
+a:link {
+    color: darkblue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: darkred;
+}
+
+a:hover {
+    color: blue;
+}
+
+
+main {
+    width: 80%;
+    margin: auto;
+    padding: 2rem;
+}
+
+#about {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+#portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.portfolio-item {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid lightgray;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.portfolio-item-description {
+    max-height: 300px;
+    overflow: clip;
+}
+
+img {
+    max-width: 300px;
+    max-height: 300px;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+button {
+    border: none;
+    background: darkblue;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.project-image-container {
+    height: 300px;
+    max-width: 300px;
+    position: relative;
+}
+
+.open-window {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0.5rem;
+}
+
+footer {
+    width: 80%;
+    height: 4rem;
+    margin: auto;
+    padding: 1rem;
+    background: lightgray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.window {
+    border: 1px solid lightgray;
+    border-radius: 1rem;
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    bottom: 20%;
+    right: 20%;
+}
+
+#dialog-button {
+    margin: 1rem;
+    float: right;
+}
+
+.hamburger {
+    background-color: lightgray;
+    height: 50vh;
+    width: 100%;
+    z-index: 100;
+    max-width: 300px;
+    position: fixed;
+    top: 6rem;
+    right: -400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    transition: .3s ease;
+    margin: 1rem;
+}
+.hamburger.active {
+    right: 10%;
+}
+/* ham menu */
+.ham-menu {
+    height: 50px;
+    width: 40px;
+    margin-left: auto;
+    position: relative;
+    visibility: hidden;
+    display: none;
+}
+.ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: darkblue;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+.ham-menu.active span {
+    background-color: white;
+}
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Responsive params */
+@media only screen and (max-width: 800px) {
+    .portfolio-item {
+        flex-direction: column;
+    }
+    #menu {
+        visibility: hidden;
+        display: none;
+    }
+    .ham-menu {
+        visibility: visible;
+        display: block;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 801px) {
+    .portfolio-item {
+        flex-direction: row;
+    }
+    #menu {
+        visibility: visible;
+        display: block;
+    }
+    .ham-menu {
+        visibility: hidden;
+        display: none;
+    }
+    .hamburger {
+        display: none;
+    }
+}

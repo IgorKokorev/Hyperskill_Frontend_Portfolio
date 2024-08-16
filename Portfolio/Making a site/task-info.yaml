@@ -1,0 +1,17 @@
+type: edu
+files:
+    -   name: src/index.html
+        visible: true
+        learner_created: false
+    -   name: test/test.js
+        visible: false
+        learner_created: false
+    -   name: src/style.css
+        visible: true
+        learner_created: true
+feedback_link: https://hyperskill.org/learn/step/11308#comment
+status: Solved
+feedback:
+    message: Congratulations!
+    time: "Thu, 15 Aug 2024 15:51:45 UTC"
+record: 2
